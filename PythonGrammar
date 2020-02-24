@@ -1,71 +1,69 @@
-Definition of Grammar: Python
-
-<function>
-  <name> </name>
-  <argument>
-  -
-  -
-  -
-  </argument>
-
-</function>
-
+Assignment
 <assignment>
-  -<variable> </variable>
-  <value> </value>
-  -
+<variable>
+  <var_type> </var_type>
+  <var_name></var_name>
+</variable>
+<value>
+  <expression>
+  // constant | variable (operator variable)* | functioncall() | 
+  </expression>
 </assignment>
+</value>
+If condition
+  <if>
+    <condition> <expression> </expression> </condition>
+    <body>
+    </body>
+  
+  <else>
+    <body>
+    </body>
 
-<condition>
-  -<expression> </expression>
-  -<operator> </operator>
-  -<expression> </expression>
-</condition>
+For loop
+<for_loop>
+  <loop_initialisation>
+    <assignment>
+    .
+    .
+  </loop_initialisation>
+  <loop_condition>
+    <expression>
+    </expression>
+  <loop_condition>
+  <loop_update>
+    <assignment>
+    </assignment>
+  <loop_update>
 
-<expression>
-  <variable> </variable>
-</expression>
+Function
+<function>
+  <func_name> </func_name>
+  <func_return> </func_return>
+  <func_arg> 
+      <func_arg_name> <func_arg_name>
+      <func_arg_type> </func_arg_type>
+  </func_arg>
+  .
+  .
+  .
+  <body> 
 
-<for>
-  <variable> </variable> 
-  <iterator> </iterator>
-  <body> </body>
-</for>
-<while> 
-  <condition> </condition>
-  <body> </body>
-</while>
+  </body>
+</function>
+Print Statement
+<print>    </print>
+Input Statement
+<input> </input>
+Expressions
 
-<if> 
-  <condition> </condition>
+While loop
+<while_loop>
+  <expression> </expression>
   <body> </body>
-</if>
-<elif>
-  <condition> </condition>
-  <body> </body>
-</elif>
-<else>
-  <condition> </condition>
-  <body> </body>
-</else>
 
-<list> </list>
-<tuple> </tuple>
-<dictionary> </dictionary>
-<set> </set>
-  <is> </is>
-  <except> </except>
-  <lambda> </lambda>
-  <yield> </yield>
-    <exec> </exec>
-  <not> </not>
-  <finally> </finally>
-  <or> </or>
-  <and></and>
-  <break> </break>
-  <pass></pass>
-  <continue> </continue>
-  <global> </global>
-  <raise> </raise>
-  <def> </def>
-  <del> </del>
+</while_loop>
+
+
+
+

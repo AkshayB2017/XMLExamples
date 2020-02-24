@@ -1,84 +1,95 @@
+import sys
 import xml.etree.ElementTree as ET
-mytree = ET.parse('helloworld.xml')
+i=0
+def expression():
+    if(tag[i+1]=='constant') or (tag[i+1]=='variable'):
+        f.write(text[i+1])
+    if(tag[i+1]=='function_call'):
+        f.write(text[i+1])
+    f.write(";")
+
+def assignment():
+    if(tag[i+1]=='variable'):
+        f.write(text[i+2])
+        f.write('')
+        f.write(text[i+3])
+        f.write('= ')
+        if(tag[i+4]=='expression'):
+            expression()
+    f.write(";")
+
+def if_expression():
+    f.write('if(')
+    if(tag[i+1]=='condition'):
+        expression()
+        f.write(text[i+3])
+        expression()
+        f.write(')')
+        f.write("{\n")
+        body()
+        f.write("\n}")
+def else_expression():
+    f.write('else {\n')
+    body()
+    f.write('\n }')
+
+def for_loop():
+    f.write('for(')
+    while(tag[i]!='loop_update'):
+        if(tag[i]=='loop_initialization'):
+            if(tag[i]=='assignment'):
+                assignment()
+            if(tag[i]=='loop_condition'):
+                if(tag[i+1]=='expression'):
+                    expression()
+        i+=1
+    if(tag[i]=='loop_update'):
+        if(tag[i+1]=='assignment'):
+            assignment()
+    f.write(')\n{\n')
+    body()
+    f.write('\n}')
+
+def function():
+    f.write(tag[i+1])
+    f.write(tag[i+2])
+    i+=3
+    if(tag[i]=='func_arg'):
+        while(tag[i]!='body'):
+            f.write(text[i+1])
+            f.write(text[i+2])
+            i+=2
+    if(tag[i]=='body'):
+        body()
+def print():
+    f.write("cout<<\"")
+    f.write(text[i])
+    f.write("\"<<endl;")
+
+def input():
+    f.write("cin>>\"")
+    f.write(text[i])
+    f.write("\">>endl;")  
+
+file=input("Enter file to be parsed")
+mytree = ET.parse(file)
 myroot = mytree.getroot()
 for child in myroot:  
-    print(child.tag, child.attrib)
-a=[]
-b=[]
-c=[]
+    i+=1
+    #print(child.tag, child.attrib)
+tag=[]
+text=[]
+attribute=[]
 for elem in myroot.iter():
     #print(elem.tag)
+    #print(elem.tag)
+    #print(elem.attrib)
     #print(elem.text)
-    a.append(elem.tag)
-    b.append(elem.text)
-    c.append(elem.attrib)
-for i in range(len(a)):
-    print(a[i],b[i],c[i])
-    #print(b[i])
+    tag.append(elem.tag)
+    text.append(elem.text)
+    attribute.append(elem.attrib)
+var_count=0
 
-'''
+for key, value in attribute[1]: 
+    print (key, value) 
 
-for i in range(len(a)):
-    
-    #if(elem.tag=='op1'):
-    #    print(elem.text)
-    if(a[i]=='procedure'):
-      print("func(")  
-      if(a[i+1]=='parameter'):
-          if(a[i+2]=='name' and a[i+3]=='type'):
-              print(b[i+3], b[i+2],",")
-              i+=3
-    if(a[i]=='parameter'):
-         if(a[i+1]=='name' and a[i+2]=='type'):
-              print(b[i+2], b[i+1])
-         if(a[i+3]=='exec'):
-              print(")")
-
-    
-'''    
-
-
-
-'''    
-    if myroot[0].tag =='parameter':
-           if(myroot[0][1].text)=='int_arr':
-               print("int",myroot[1][0].text,"[],\t")
-    if myroot[1].tag == 'parameter':
-        if(myroot[1][1].text)=='int':
-            print("int", myroot[2][0].text,"\t")
-
-    print(elem.tag)
-
-'''
-'''
-for neighbor in myroot.iter('neighbor'):
-    print(neighbor.attrib)
-
-f = open("linearsearch.xml", "r")
-for x in f:
- if(x.strip()=="<procedure>"):
-   print("function:")
- if(x.strip()=="<parameter>"):
-    print("(")
- if(x.strip()=="<type>"):
-    print("int")
- if(x.strip()=="<name>"):
-    print("list")
-'''
-'''
-print(myroot.tag)
-print(myroot[1].tag)
-print(myroot[2].tag)
-print(myroot[2][0][0].tag)
-print(myroot[2][0][0][0].text)
-'''
-'''
-if(myroot.tag=='procedure'):
-    print("function(\t")
-    if myroot[0].tag =='parameter':
-           if(myroot[0][1].text)=='int_arr':
-               print("int",myroot[1][0].text,"[],\t")
-    if myroot[1].tag == 'parameter':
-        if(myroot[1][1].text)=='int':
-            print("int", myroot[2][0].text,"\t")
-'''
