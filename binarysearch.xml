@@ -1,0 +1,81 @@
+<procedure>
+  <parameter>
+    <name>A</name>
+    <type>int_arr</type>
+  </parameter>
+  <parameter>
+    <name>n</name>
+    <type>int</type>
+  </parameter>
+  <parameter>
+    <name>x</name>
+    <type>int</type>
+  </parameter>
+  <exec>
+     <assignment>
+         <name>lowerBound</name>
+         <type>int</type>
+         <value>1</value>
+      </assignment>
+      <assignment>
+         <name>upperBound</name>
+         <type>int</type>
+         <value>n</value>
+      </assignment>
+      <while>
+         <condition>
+              <op1>x</op1>
+              <op2>A[i]</op2>
+              <op>!=</op>
+        </condition>
+        <exec>
+          <if>
+          <condition>
+              <op1>upperBound</op1>
+              <op2>lowerBound</op2>
+              <op><</op>
+        </condition>
+            <exec>
+               <exit></exit>
+            </exec>
+         <assignment>
+            <op1>midPoint</op1>
+            <op2> lowerBound+ (upperBound-lowerBound)/2</op2>
+        </assignment>
+        <condition>
+              <op1>upperBound</op1>
+              <op2>lowerBound</op2>
+              <op> < </op>
+        </condition>
+            <exec>
+               <exit></exit>
+            </exec>
+        <condition>
+              <op1>A[midPoint]>x</op1>
+              <op2>x</op2>
+              <op> > </op>
+        </condition>
+            <exec>
+               <assignment>
+                  <op1>upperBound</op1>
+                  <op2>midPoint-1 </op2>
+                </assignment>
+            </exec>
+        <condition>
+              <op1>A[midPoint]>x</op1>
+              <op2>x</op2>
+              <op> == </op>
+        </condition>
+            <exec>
+              <write> Found at midPoint</write>
+               <exit></exit>
+            </exec>
+       </while>
+    </exec>
+</procedure>
+
+
+
+            
+
+         

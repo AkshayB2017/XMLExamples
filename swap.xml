@@ -1,0 +1,32 @@
+<main>
+ <input>Enter value of a</input>
+ <variable>
+    <type>int</type>
+    <name>a</name>
+ </variable>
+ <input>Enter value of b</input>
+ <variable>
+    <type>int</type>
+    <name>b</name>
+ </variable>
+ <variable>
+   <type>int </type>
+   <name>c </name>
+ </variable>
+ <assignment>
+   <op1>a</op1>
+   <op2>c</op2>
+   <op>=</op>
+ </assignment>
+ <assignment>
+   <op1>c</op1>
+   <op2>b</op2>
+   <op>=</op>
+ </assignment>
+ <assignment>
+   <op1>b</op1>
+   <op2>a</op2>
+   <op>=</op>
+ </assignment>
+ <write>Result is a,b</write>
+</main>

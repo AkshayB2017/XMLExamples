@@ -1,0 +1,47 @@
+ <procedure>
+    <parameter>
+       <name>list</name>
+       <type>int_arr</type>
+    </parameter>
+    <parameter>
+      <name>value</name>
+      <type>int</type>
+    </parameter>
+    <exec>
+      <for> 
+         <init>
+            <assign>
+               <op1>item</op1>
+               <op2>list[0]</op2>
+            </assign>
+         </init>   
+         <terminate>
+            <condition>
+               <op1>item</op1>
+               <op2>'\0'</op2>
+               <op>==</op>
+            </condition>
+         </terminate>   
+         <iter>
+             
+         </iter>
+         <exec>  
+           <if>
+              <condition>
+                <op1>item</op1>
+                <op2>value</op2>
+                <op>==</op>
+              </condition>
+              <exec>
+                 <return>
+                     <name>location</name>
+                     <type>int</type>
+                  </return>
+               </exec>   
+            </if>  
+         </exec>    
+      </for>
+   </exec>
+
+</procedure>
+

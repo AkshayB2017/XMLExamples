@@ -1,0 +1,11 @@
+Set n to number of records to be sorted
+repeat
+flag = false;
+for counter = 1 to n-1 do
+if key[counter] > key[counter+1] then
+swap the records;
+set flag = true;
+end if
+end do
+n = n-1;
+until flag = false or n=1

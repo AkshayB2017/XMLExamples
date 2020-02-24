@@ -1,0 +1,22 @@
+<for>
+  <init> 
+    <name> </name>
+    <type> </type>
+    <value> </value>
+  </init>
+  <terminate> 
+     <condition> 
+        <op1> </op1>
+        <op2> </op2>
+        <op> </op>
+     </condition>
+    </terminate>
+    <iter>
+          <name> </name>
+          <op> </op>
+          <val> </val>
+    </iter>
+    <body>
+    
+    </body>
+ </for>

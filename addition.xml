@@ -1,0 +1,23 @@
+<main>
+ <input>Enter value of a</input>
+ <variable>
+    <type>int</type>
+    <name>a</name>
+ </variable>z
+ <input>Enter value of b</input>
+ <variable>
+    <type>int</type>
+    <name>b</name>
+ </variable>
+ <variable>
+   <type>int </type>
+   <name>c </name>
+ </variable>
+ <assignment>
+   <op1>a</op1>
+   <op2>b</op2>
+   <op3>c</op3>
+   <op>+</op>
+ </assignment>
+ <write>Result is c</write>
+</main>

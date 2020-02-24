@@ -1,0 +1,4 @@
+<main>
+ <input type='c'>Enter the text to be printed</input>
+ <write>Hello World</write>
+</main>

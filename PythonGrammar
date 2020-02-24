@@ -1,0 +1,71 @@
+Definition of Grammar: Python
+
+<function>
+  <name> </name>
+  <argument>
+  -
+  -
+  -
+  </argument>
+
+</function>
+
+<assignment>
+  -<variable> </variable>
+  <value> </value>
+  -
+</assignment>
+
+<condition>
+  -<expression> </expression>
+  -<operator> </operator>
+  -<expression> </expression>
+</condition>
+
+<expression>
+  <variable> </variable>
+</expression>
+
+<for>
+  <variable> </variable> 
+  <iterator> </iterator>
+  <body> </body>
+</for>
+<while> 
+  <condition> </condition>
+  <body> </body>
+</while>
+
+<if> 
+  <condition> </condition>
+  <body> </body>
+</if>
+<elif>
+  <condition> </condition>
+  <body> </body>
+</elif>
+<else>
+  <condition> </condition>
+  <body> </body>
+</else>
+
+<list> </list>
+<tuple> </tuple>
+<dictionary> </dictionary>
+<set> </set>
+  <is> </is>
+  <except> </except>
+  <lambda> </lambda>
+  <yield> </yield>
+    <exec> </exec>
+  <not> </not>
+  <finally> </finally>
+  <or> </or>
+  <and></and>
+  <break> </break>
+  <pass></pass>
+  <continue> </continue>
+  <global> </global>
+  <raise> </raise>
+  <def> </def>
+  <del> </del>

@@ -1,0 +1,48 @@
+<specification name="example">
+<program name="main">
+ <variables>
+ .
+ .
+ .
+ </variables>
+ <sequence>
+ .
+ .
+ .
+ </sequence>
+ </program>
+ <function name="example1" output="output_type">
+ <parameter name="par_name" type="par_type"/>
+ .
+ .
+ .
+ <parameter name="par_name1" type="par_type1"/>
+ <variables>
+ .
+ .
+ .
+ </variables>
+ <sequence>
+ .
+ .
+ .
+ </sequence>
+ </function>
+ <procedure name="example2">
+ <parameter name="par_name" type="par_type" direction="in/out"/>
+ .
+ .
+ .
+ <parameter name="par_name1" type="par_type1" direction="in/out"/>
+ <variables>
+ .
+ .
+ .
+ </variables>
+ <sequence>
+ .
+ .
+ .
+ </sequence>
+ </procedure> 
+ </specification>
