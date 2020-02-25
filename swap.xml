@@ -1,32 +1,50 @@
 <main>
- <input>Enter value of a</input>
- <variable>
-    <type>int</type>
-    <name>a</name>
- </variable>
- <input>Enter value of b</input>
- <variable>
-    <type>int</type>
-    <name>b</name>
- </variable>
- <variable>
-   <type>int </type>
-   <name>c </name>
- </variable>
- <assignment>
-   <op1>a</op1>
-   <op2>c</op2>
-   <op>=</op>
- </assignment>
- <assignment>
-   <op1>c</op1>
-   <op2>b</op2>
-   <op>=</op>
- </assignment>
- <assignment>
-   <op1>b</op1>
-   <op2>a</op2>
-   <op>=</op>
- </assignment>
- <write>Result is a,b</write>
-</main>
+ <function>
+  <func_name> swap</func_name>
+  <func_return> void</func_return>
+  <func_arg> 
+      <func_arg_name>a <func_arg_name>
+      <func_arg_type>int </func_arg_type>
+  </func_arg>
+  <func_arg> 
+      <func_arg_name>b <func_arg_name>
+      <func_arg_type>int </func_arg_type>
+  </func_arg>
+  <body>
+   <assignment> 
+     <variable>
+       <type>int</type>
+       <name>temp</name>
+      </variable>
+      <value>0</value>
+    </assignment>
+    <expression>
+    <variable>
+        <var_name>temp</var_name>
+    </variable>
+      <operator>=</operator>0
+    <variable>
+       <var_name>a</var_name>
+    </variable>
+    </expression>
+    <expression>
+    <variable>
+        <var_name>a</var_name>
+    </variable>
+      <operator>=</operator>0
+    <variable>
+       <var_name>b</var_name>
+    </variable>
+    </expression>
+    <expression>
+    <variable>
+        <var_name>b</var_name>
+    </variable>
+      <operator>=</operator>0
+    <variable>
+       <var_name>temp</var_name>
+    </variable>
+    
+    </expression>
+ </function>
+ </main>

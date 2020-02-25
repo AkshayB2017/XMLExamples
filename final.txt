@@ -1,5 +1,0 @@
-if __name__== "__main__":
-  main() 
- def main():
-input("Enter the text to be printed")
-print("Hello World")
