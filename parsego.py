@@ -89,7 +89,18 @@ for elem in myroot.iter():
     text.append(elem.text)
     attribute.append(elem.attrib)
 var_count=0
+for i in range(len(tag)):
+    if(tag[i]=='expression'):
+        expression(i)
+    if(tag[i]=='assignment'):
+        assigment(i)
+    if(tag[i]=='if'):
+        if_expression(i)
+    if(tag[i]=='else'):
+        else_expression(i)
+    if(tag[i]=='print'):
+        print_expression(i)
+    if(tag[i]=='input'):
+        input_expression(i)
 
-for key, value in attribute[1]: 
-    print (key, value) 
 
