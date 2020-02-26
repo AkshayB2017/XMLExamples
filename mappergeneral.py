@@ -33,6 +33,8 @@ def expression(i):
                 expression(i+4)
             if(tag[i+4]=='variable'):
                 f.write(text[i+5])
+                i+=5
+
 
     if(tag[i+1]=='function_call'):
         f.write(text[i+1])
@@ -61,6 +63,7 @@ def assignment(i):
         f.write('=')
         if(tag[i+4]=='expression'):
             expression(i)
+            
     f.write(";")
 
 def if_expression(i):
@@ -111,7 +114,7 @@ def print_expression(i):
     f.write("cout<<\"")
     f.write(text[i])
     f.write("\"<<endl;\n")
-    i+=1
+    
 
 def input_expression(i):
     f.write("cin>>\"")
@@ -122,7 +125,8 @@ def input_expression(i):
 
 
 
-file=input("Enter file to be parsed")
+file=input("Enter file to be parsed:")
+file=file.lstrip()
 mytree = ET.parse(file)
 myroot = mytree.getroot()
 
