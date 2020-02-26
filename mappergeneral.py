@@ -27,7 +27,13 @@ def expression(i):
         i+=1
     if(tag[i+1]=='variable'):
         f.write(text[i+2])
-        i+=2
+        if(tag[i+3]=='operator'):
+            f.write(text[i+3])
+            if(tag[i+4]=='expression'):
+                expression(i+4)
+            if(tag[i+4]=='variable'):
+                f.write(text[i+5])
+
     if(tag[i+1]=='function_call'):
         f.write(text[i+1])
     f.write(";")
