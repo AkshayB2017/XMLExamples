@@ -1,4 +1,7 @@
 import xml.etree.ElementTree as ET
+def header_file():
+    f.write('#include<stdio.h>\n')
+    f.write('#include<stdlib.h>\n')
 def mapper(j):
     for i in range(j,len(tag)-1):
         if(tag[i]=='expression'):
@@ -122,9 +125,6 @@ def input_expression(i):
     f.write(">>endl;\n")  
     i+=1
 
-
-
-
 file=input("Enter file to be parsed:")
 file=file.lstrip()
 mytree = ET.parse(file)
@@ -144,4 +144,7 @@ for elem in myroot.iter():
     attribute.append(elem.attrib)
 i=0
 f=open("final.txt","w")
+header_file()
 mapper(i)    
+
+
