@@ -117,9 +117,9 @@ def print_expression(i):
     
 
 def input_expression(i):
-    f.write("cin>>\"")
+    f.write("cin>>")
     f.write(text[i])
-    f.write("\">>endl;\n")  
+    f.write(">>endl;\n")  
     i+=1
 
 

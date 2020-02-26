@@ -1,8 +1,8 @@
 int main()
 {
 cout<<"Enter first number"<<endl;
-cin>>"num1">>endl;
+cin>>num1>>endl;
 cout<<"Enter second number"<<endl;
-cin>>"num2">>endl;
+cin>>num2>>endl;
 sum=num1+num2;;num1+num2;return 0;
 }
