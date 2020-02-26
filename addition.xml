@@ -18,6 +18,7 @@
   <expression>
      <variable>
         <var_name>sum</var_name>
+      </variable>
       <operator>=</operator>
       <expression>
          <variable>

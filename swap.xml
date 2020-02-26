@@ -1,6 +1,6 @@
 <main>
  <function>
-  <func_name> swap</func_name>
+  <func_name>swap</func_name>
   <func_return> void</func_return>
   <func_arg> 
       <func_arg_name>a <func_arg_name>
@@ -46,5 +46,6 @@
     </variable>
     
     </expression>
+    </body>
  </function>
  </main>
