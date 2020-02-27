@@ -65,5 +65,56 @@ While loop
 </while_loop>
 
 
+<structure> 
+  <struct_elem>
+    <struct_elem_type> </struct_elem_type>
+    <struct_elem_name> </struct_elem_name>
+  </struct_elem>
+  .
+  .
+  .
+  <struct_instance>
+     <struct_instance_type> </struct_instance_type>
+     <struct_instance_name> </struct_instance_name>
+  </struct_instance>
+  .
+  .
+  .
+</structure>
 
+#Indicates a variable defined within structure (eg: f.i)
+<struct_variable>
+   <struct_instance_name> </struct_instance_name>
+   <struct_elem_name> </struct_elem_name>
+</struct_variable>
+
+<union>
+<union_elem>
+    <union_elem_type> </union_elem_type>
+    <union_elem_name> </union_elem_name>
+  </union_elem>
+  .
+  .
+  .
+  <union_instance>
+     <union_instance_type> </union_instance_type>
+     <union_instance_name> </union_instance_name>
+  </union_instance>
+  .
+  .
+  .
+</union>
+
+#Indicates a variable defined within union
+<union_variable>
+   <union_instance_name> </union_instance_name>
+   <union_elem_name> </union_elem_name>
+</union_variable>
+# hash-define in C
+<define>  
+ <define_variable> </define_variable>
+ <define_value> </define_value>
+ #or 
+ <expression> </expression>
+#define arrays
 
