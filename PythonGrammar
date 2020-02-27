@@ -118,3 +118,28 @@ While loop
  <expression> </expression>
 #define arrays
 
+#linked list 
+#define default names for linked list elements if not mentioned
+
+<linked_list>
+  <linked_list_name> </linked_list_name>
+  <linked_list_variable>
+     <linked_list_variable_type> </linked_list_variable_type>
+     <linked_list_variable_name> <linked_list_variable_name>
+  </linked_list_variable>
+  .
+  .
+  .
+  <linked_list_node> 
+     <linked_list_node_name> </linked_list_node_name>
+     .
+     .
+     .
+
+  </linked_list_node>
+</linked_list>
+
+<linked_list_var>
+  <linked_list_name> </linked_list_name>
+  <linked_list_variable_name> </linked_list_variable_name>
+</linked_list_var>
