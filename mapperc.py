@@ -28,7 +28,18 @@ def main_func(i):
     
 
 def expression(i):
-    
+    if(tag[i+1]=='constant'):
+        f.write(text[i+1])
+        i+=1
+    if(tag[i+1]=='variable'):
+        f.write(text[i+2])
+        if(tag[i+3]=='operator'):
+            f.write(text[i+3])
+            if(tag[i+4]=='expression'):
+                expression(i+4)
+            if(tag[i+4]=='variable'):
+                f.write(text[i+5])
+                i+=5
 
 def variable(i):
   
@@ -38,8 +49,27 @@ def operator(i):
 
 
 def assignment(i):
-   
+   if(tag[i+1]=='variable'):
+        f.write(text[i+2])
+        f.write('')
+        f.write(text[i+3])
+        f.write('=')
+        if(tag[i+4]=='expression'):
+            expression(i)
+            
+    f.write(";")
+
 def if_expression(i):
+    f.write('if(')
+    if(tag[i+1]=='condition'):
+        expression()
+        f.write(text[i+3])
+        expression()
+        f.write(')')
+        f.write("{\n")
+        mapper(i)
+        f.write("\n}")
+    
    
 def else_expression(i):
    
