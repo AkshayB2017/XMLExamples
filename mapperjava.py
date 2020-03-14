@@ -1,10 +1,15 @@
 import xml.etree.ElementTree as ET
+def header_file():
+    f.write("import.util.Scanner\n")
+    f.write("import.util.math\n")
+
+
 def converterjava():
     header_file()
-    mapper(i)
-
-def header_file():
-    
+    if tag[0]=='class':
+       f.write("public class %s {\n",text[0])
+       mapper(i)
+       f.write("}")
 def mapper(j):
     for i in range(j,len(tag)-1):
         if(tag[i]=='expression'):
@@ -25,7 +30,11 @@ def mapper(j):
     f.write("}")
     
 def main_func(i):
-    
+    f.write("public static void main(String[] args) {\n")
+    f.write("Scanner scan = new Scanner(System.in);")
+    mapper(i+1)
+    f.write("}")
+
 
 def expression(i):
     if(tag[i+1]=='constant'):
@@ -80,9 +89,12 @@ def for_loop(i):
 def function(i):
     
 def print_expression(i):
-    
+    f.write("System.out.println(")
+    f.write(text[i])
+    f.write(");")
 
 def input_expression(i):
+    
     
 
 file=input("Enter file to be parsed:")
@@ -103,7 +115,7 @@ for elem in myroot.iter():
     text.append(elem.text)
     attribute.append(elem.attrib)
 i=0
-f=open("final.txt","w")
+f=open("final.txt","w"
 converterjava()
 
 
